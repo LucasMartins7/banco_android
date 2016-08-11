@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimary">#8c0044</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#ff0000</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:colorButtonNormal">#8b181f</item>
+        <item name="android:title">DeviceBank</item>
+        <!--<item name="colorPrimary">#65bb65</item>-->
+        <!--<item name="colorPrimaryDark">#658865</item>-->
+        <!--<item name="colorAccent">#65FF65</item>-->
+        <!--<item name="android:colorButtonNormal">#65bb65</item>-->
+        <!--<item name="selectableItemBackground">@drawable/background_main2</item>-->
+        <!--<item name="selectableItemBackground">@drawable/background_main2</item>-->
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/explode</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="Widget.AppCompat.ImageButton" parent="Base.Widget.AppCompat.ImageButton"/>-->
+    <!--<style name="Base.Widget.AppCompat.ImageButton" parent="android:Widget.ImageButton">-->
+    <!--<item name="android:background">@drawable/background_main2</item>-->
+    <!--</style>-->
+
+    <!--<style name="Widget">-->
+    <!--<item name="android:textAppearance">@style/TextAppearance.Widget.Button</item>-->
+    <!--</style>-->
+
+    <!--<style name="TextAppearance.Widget.Button" parent="TextAppearance.Small.Inverse">-->
+    <!--<item name="textColor">@color/primary_text_light_nodisable</item>-->
+    <!--</style>-->
+
+    <!--<style name="Widget.ImageButton">-->
+    <!--<item name="focusable">true</item>-->
+    <!--<item name="clickable">true</item>-->
+    <!--<item name="scaleType">center</item>-->
+    <!--<item name="background">@drawable/background_main2</item>-->
+    <!--</style>-->
+
+
+</resources>

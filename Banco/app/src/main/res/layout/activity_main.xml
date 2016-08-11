@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="banco.devicelab.com.br.banco.MainActivity"
+    android:orientation="vertical"
+    >
+    <Button
+        android:id="@+id/main_button_login"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:text="Login"/>
+    <Button
+        android:id="@+id/main_button_cadastro"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
+        android:text="Cadastro"/>
+
+
+</LinearLayout>

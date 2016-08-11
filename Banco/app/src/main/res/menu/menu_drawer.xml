@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/primary_items" android:checkableBehavior="single">
+        <item android:id="@+id/fragment1" android:icon="@mipmap/ic_launcher" android:checked="true" android:title="Fragmento1"/>
+
+        <item android:id="@+id/fragment2" android:icon="@mipmap/ic_check" android:title="Fragmento2"/>
+    </group>
+</menu>
