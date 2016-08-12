@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 
 import banco.devicelab.com.br.banco.R;
 
-public class FirstFragment extends Fragment
+public class TransferenciaFragment extends Fragment
 {
-    public FirstFragment()
+    public TransferenciaFragment()
     {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.tab_fragment_3, container, false);
+        View view = inflater.inflate(R.layout.transferencia_fragment, container, false);
 
 //        setupToolbar(view);
         return view;

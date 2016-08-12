@@ -24,4 +24,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="conta_button_consulta">Consulta</string>
+    <string name="conta_button_desbloqueio">Desbloqueio</string>
+    <string name="conta_buton_solicita">Solicitar Cartão</string>
+    <string name="menu_title_cartoes">Cartões</string>
+    <string name="menu_title_conta">Conta</string>
+    <string name="menu_title_pagamento">Pagamento</string>
+    <string name="menu_title_transferencia">Transferência</string>
+    <string name="menu_title_saida">Sair</string>
 </resources>

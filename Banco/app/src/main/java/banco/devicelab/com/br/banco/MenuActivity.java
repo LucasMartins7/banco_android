@@ -6,11 +6,17 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import banco.devicelab.com.br.banco.fragment.FirstFragment;
+import java.util.zip.Inflater;
+
+import banco.devicelab.com.br.banco.fragment.CartoesFragment;
+import banco.devicelab.com.br.banco.fragment.ContaFragment;
+import banco.devicelab.com.br.banco.fragment.PagamentosFragment;
+import banco.devicelab.com.br.banco.fragment.TransferenciaFragment;
 
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -79,6 +85,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 //        }
 //    }
 
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
     private void initNavigationDrawer()
     {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -121,12 +133,18 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
         switch (menuItem.getItemId())
         {
-            case R.id.fragment1:
-                fragment = new FirstFragment();
+            case R.id.menu_cartoes:
+                fragment = new CartoesFragment();
                 break;
 
-            case R.id.fragment2:
-//                fragment = new SecondFragment();
+            case R.id.menu_conta:
+                fragment = new ContaFragment(this);
+                break;
+            case R.id.menu_pagamento:
+                fragment = new PagamentosFragment();
+                break;
+            case R.id.menu_transferencia:
+                fragment = new TransferenciaFragment();
                 break;
 
             default:

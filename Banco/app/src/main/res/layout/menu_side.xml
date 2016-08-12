@@ -7,25 +7,46 @@
     android:fitsSystemWindows="true"
     tools:context=".MenuActivity">
 
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/drawer_content"
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/navigation_view"
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/menu_drawer_header"
-            app:menu="@menu/menu_drawer" />
-    </android.support.v4.widget.DrawerLayout>
+            <FrameLayout
+                android:id="@+id/drawer_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/menu_drawer_header"
+                app:menu="@menu/menu_drawer">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <Button
+                        android:id="@+id/saida"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/menu_title_saida" />
+
+                </LinearLayout>
+
+            </android.support.design.widget.NavigationView>
+        </android.support.v4.widget.DrawerLayout>
+
+    </LinearLayout>
 </RelativeLayout>
 
 

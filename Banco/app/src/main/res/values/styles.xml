@@ -10,7 +10,7 @@
         <item name="colorPrimaryDark">#000</item>
         <item name="colorAccent">#ff0000</item>
         <item name="android:textColor">#ffffff</item>
-        <item name="android:colorButtonNormal">#8b181f</item>
+        <item name="android:colorButtonNormal">#a94a4a</item>
         <item name="android:title">DeviceBank</item>
         <!--<item name="colorPrimary">#65bb65</item>-->
         <!--<item name="colorPrimaryDark">#658865</item>-->
