@@ -1,26 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_main"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="banco.devicelab.com.br.banco.MainActivity"
-    android:orientation="vertical"
     >
+    <RelativeLayout
+        android:layout_marginTop="450dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+        <ImageView
+
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="250dp"/>
+    </RelativeLayout>
+
+
     <Button
         android:id="@+id/main_button_login"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="100dp"
+        android:text="Login"
+        android:background="@drawable/avatar"
+        android:backgroundTint="@color/colorAccent"/>
+    <Button
+        android:id="@+id/main_button_pin"
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_height="50dp"
-        android:layout_marginTop="200dp"
-        android:text="Login"/>
+        android:layout_below="@id/main_button_login"
+        android:text="Chave de segurança"
+        />
+
     <Button
         android:id="@+id/main_button_cadastro"
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_height="50dp"
+        android:layout_below="@id/main_button_pin"
         android:text="Cadastro"/>
 
 
-</LinearLayout>
+</RelativeLayout>

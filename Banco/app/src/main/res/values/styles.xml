@@ -12,6 +12,7 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:colorButtonNormal">#a94a4a</item>
         <item name="android:title">DeviceBank</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
         <!--<item name="colorPrimary">#65bb65</item>-->
         <!--<item name="colorPrimaryDark">#658865</item>-->
         <!--<item name="colorAccent">#65FF65</item>-->

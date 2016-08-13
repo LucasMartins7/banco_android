@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import banco.devicelab.com.br.banco.MenuActivity;
 import banco.devicelab.com.br.banco.R;
 
 public class CartoesFragment extends Fragment{

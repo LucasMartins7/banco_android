@@ -10,8 +10,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.zip.Inflater;
-
 import banco.devicelab.com.br.banco.dao.CorrentistaDAO;
 import banco.devicelab.com.br.banco.helper.CorrentistaHelper;
 import banco.devicelab.com.br.banco.modelo.Correntista;

@@ -1,15 +1,15 @@
 package banco.devicelab.com.br.banco;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import banco.devicelab.com.br.banco.R;
 
-public class TransferenciaActivity extends AppCompatActivity {
+public class PinActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transferencia);
+        setContentView(R.layout.activity_pin);
     }
 }

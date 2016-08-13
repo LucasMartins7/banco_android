@@ -7,16 +7,22 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
+import banco.devicelab.com.br.banco.R;
+import banco.devicelab.com.br.banco.dao.CorrentistaDAO;
 import banco.devicelab.com.br.banco.fragment.CartoesFragment;
 import banco.devicelab.com.br.banco.fragment.ContaFragment;
 import banco.devicelab.com.br.banco.fragment.PagamentosFragment;
 import banco.devicelab.com.br.banco.fragment.TransferenciaFragment;
+import banco.devicelab.com.br.banco.modelo.Correntista;
 
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -159,4 +165,25 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             setTitle(menuItem.getTitle());
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_menu:
+
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }

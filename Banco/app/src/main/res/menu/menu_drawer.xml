@@ -9,7 +9,8 @@
             android:id="@+id/menu_conta"
             android:checked="true"
             android:icon="@mipmap/ic_wallet"
-            android:title="@string/menu_title_conta" />
+            android:title="@string/menu_title_conta"
+            />
 
         <item
             android:id="@+id/menu_cartoes"

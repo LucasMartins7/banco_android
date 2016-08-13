@@ -3,6 +3,8 @@ package banco.devicelab.com.br.banco;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import banco.devicelab.com.br.banco.R;
+
 public class PagamentosActivity extends AppCompatActivity {
 
     @Override

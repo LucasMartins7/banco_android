@@ -27,6 +27,8 @@
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
+                app:itemTextColor="@color/colorPrimaryDark"
+                app:itemIconTint="@color/colorPrimaryDark"
                 app:headerLayout="@layout/menu_drawer_header"
                 app:menu="@menu/menu_drawer">
 
