@@ -19,9 +19,11 @@ public class ContaFragment extends Fragment { private MenuActivity menuActivity;
         this.menuActivity = menuActivity;
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.conta_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_conta, container, false);
 
 //        setupToolbar(view);
 //

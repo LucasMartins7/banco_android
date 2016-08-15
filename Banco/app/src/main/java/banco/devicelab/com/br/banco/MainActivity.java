@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Button chaveSeguranca = (Button) findViewById(R.id.main_button_pin);
-        if (cadastro != null) {
-            cadastro.setOnClickListener(new View.OnClickListener() {
+        if (chaveSeguranca != null) {
+            chaveSeguranca.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+                    Intent intent = new Intent(MainActivity.this, PinActivity.class);
                     startActivity(intent);
                 }
             });

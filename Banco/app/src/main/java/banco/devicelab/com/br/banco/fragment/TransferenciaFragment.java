@@ -17,7 +17,7 @@ public class TransferenciaFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.transferencia_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_transferencia, container, false);
 
 //        setupToolbar(view);
         return view;

@@ -27,9 +27,6 @@
         <activity android:name=".MenuActivity" />
         <!-- android:theme="@style/AppTheme.NoActionBar" -->
         <!-- android:label="@string/title_activity_menu" -->
-        <activity android:name=".PagamentosActivity" />
-        <activity android:name=".CartoesActivity" />
-        <activity android:name=".TransferenciaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

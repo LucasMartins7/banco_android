@@ -39,7 +39,7 @@
         android:layout_centerHorizontal="true"
         android:layout_height="50dp"
         android:layout_below="@id/main_button_login"
-        android:text="Chave de segurança"
+        android:text="@string/chave_segurança"
         />
 
     <Button

@@ -32,4 +32,8 @@
     <string name="menu_title_pagamento">Pagamento</string>
     <string name="menu_title_transferencia">Transferência</string>
     <string name="menu_title_saida">Sair</string>
+    <string name="chave_segurança">CHAVE DE SEGURANÇA</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

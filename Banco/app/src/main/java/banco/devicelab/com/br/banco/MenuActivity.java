@@ -5,24 +5,18 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.zip.Inflater;
-
-import banco.devicelab.com.br.banco.R;
-import banco.devicelab.com.br.banco.dao.CorrentistaDAO;
 import banco.devicelab.com.br.banco.fragment.CartoesFragment;
 import banco.devicelab.com.br.banco.fragment.ContaFragment;
 import banco.devicelab.com.br.banco.fragment.PagamentosFragment;
 import banco.devicelab.com.br.banco.fragment.TransferenciaFragment;
-import banco.devicelab.com.br.banco.modelo.Correntista;
 
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,65 +25,30 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private TextView username;
     private NavigationView navigationView;
     private TextView email;
+    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-//        initNavigationDrawer();
-//        initNavigationDrawerHeader();
-//        initDrawerListener(savedInstanceState);
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         initNavigationDrawer();
         initNavigationDrawerHeader();
 
-//        createTabs();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        createFragment("Conta", new ContaFragment(this));
+
+        Button exit = (Button) findViewById(R.id.saida);
+        if (exit != null) {
+            exit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MenuActivity.this.finish();
+                }
+            });
+        }
     }
-
-
-
-//    private void createTabs() {
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-//        if (tabLayout != null) {
-//            tabLayout.addTab(tabLayout.newTab().setText("Inicio"));
-//            tabLayout.addTab(tabLayout.newTab().setText("Extrato"));
-//            tabLayout.addTab(tabLayout.newTab().setText("Cartões"));
-//
-//            tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-//        }
-//
-//        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-//        final PagerAdapter adapter;
-//        if (tabLayout != null) {
-//            adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-//            if (viewPager != null) {
-//                viewPager.setAdapter(adapter);
-//                viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-//                tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//                    @Override
-//                    public void onTabSelected(TabLayout.Tab tab) {
-//                        viewPager.setCurrentItem(tab.getPosition());
-//                    }
-//
-//                    @Override
-//                    public void onTabUnselected(TabLayout.Tab tab) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onTabReselected(TabLayout.Tab tab) {
-//
-//                    }
-//                });
-//            }
-//        }
-//    }
 
 
     @Override
@@ -106,6 +65,25 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         {
             navigationView.setNavigationItemSelectedListener(this);
         }
+
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
+                R.string.drawer_open, R.string.drawer_close) {
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+        drawerToggle.setDrawerIndicatorEnabled(true);
+        drawerLayout.setDrawerListener(drawerToggle);
+
     }
 
     private void initNavigationDrawerHeader()
@@ -133,6 +111,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerToggle.syncState();
+    }
+
     public void selectDrawerItem(MenuItem menuItem)
     {
         Fragment fragment = null;
@@ -157,33 +141,21 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
+        createFragment(menuItem.getTitle(), fragment);
+    }
+
+    private void createFragment(CharSequence title, Fragment fragment) {
         if(fragment != null)
         {
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.drawer_content, fragment).commit();
-
-            setTitle(menuItem.getTitle());
+            setTitle(title);
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_menu:
-
-
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return drawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
 }

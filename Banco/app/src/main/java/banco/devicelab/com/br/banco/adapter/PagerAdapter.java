@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import banco.devicelab.com.br.banco.fragment.TabFragment1;
-import banco.devicelab.com.br.banco.fragment.TabFragment2;
+import banco.devicelab.com.br.banco.fragment.SaldoFragment;
+import banco.devicelab.com.br.banco.fragment.ExtratoFragment;
 import banco.devicelab.com.br.banco.fragment.TabFragment3;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
@@ -22,10 +22,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                TabFragment1 tab1 = new TabFragment1();
+                SaldoFragment tab1 = new SaldoFragment();
                 return tab1;
             case 1:
-                TabFragment2 tab2 = new TabFragment2();
+                ExtratoFragment tab2 = new ExtratoFragment();
                 return tab2;
             case 2:
                 TabFragment3 tab3 = new TabFragment3();
